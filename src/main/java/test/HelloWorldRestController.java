@@ -12,10 +12,10 @@ public class HelloWorldRestController {
         return "Welcome to RestTemplate Example.";
     }
  
-    @RequestMapping("/hello/{player}")
-    public Message message(@PathVariable String player) {//REST Endpoint.
+    @RequestMapping("/hello/{name}/{surName}")
+    public Message message(@PathVariable String name, @PathVariable String surName) {//REST Endpoint.
  
-        Message msg = new Message(player, "Ciao " + player);
+        Message msg = new Message(name, surName, "Ciao " + name + " " + surName);
         return msg;
     }
 }
