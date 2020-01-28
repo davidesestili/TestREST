@@ -4,13 +4,11 @@ public class Message
 {
 	private String name;
 	private String surName;
-	private String text;
 
-	public Message(String name, String surName, String text)
+	public Message(String name, String surName)
 	{
 		this.name = name;
 		this.surName = surName;
-		this.text = text;
 	}
 	
 	public String getName() {
@@ -26,9 +24,6 @@ public class Message
 		this.surName = surName;
 	}
 	public String getText() {
-		return text;
-	}
-	public void setText(String text) {
-		this.text = text;
+		return "Ciao " + name + " " + surName;
 	}
 }
