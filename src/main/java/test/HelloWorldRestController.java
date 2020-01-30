@@ -12,6 +12,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 */
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -59,7 +60,7 @@ public class HelloWorldRestController {
     	*/
     	
     	List<Message> messages = new ArrayList<Message>();
-    	Iterable<Utenti> utenti = userRepository.findAll();
+    	Iterable<Utenti> utenti = userRepository.findAll(new Sort(Sort.Direction.ASC, "cognome", "nome"));
     	
     	for(Utenti u : utenti)
     	{

@@ -48,4 +48,8 @@ public class Utenti implements Serializable {
 		this.nome = nome;
 	}
 
+	@Override
+	public int hashCode() {
+		return 0;
+	}
 }
