@@ -16,7 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <springframework.version>4.3.26.RELEASE</springframework.version>
+    <springframework.version>5.1.5.RELEASE</springframework.version>
     <jackson.library>2.7.5</jackson.library>
   </properties>
 
@@ -61,17 +61,28 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${springframework.version}</version>
         </dependency>
+		<dependency>
+		    <groupId>com.zaxxer</groupId>
+		    <artifactId>HikariCP</artifactId>
+    		<version>2.2.5</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
 		<dependency>
 		    <groupId>org.eclipse.persistence</groupId>
 		    <artifactId>javax.persistence</artifactId>
 		    <version>2.2.1</version>
 		</dependency>
-        <!-- Hibernate 4.3.6 Final -->
+		<!-- JPA Provider (Hibernate) -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-entitymanager</artifactId>
+		    <version>5.4.10.Final</version>
+		</dependency> 
+		<!-- Hibernate 4.3.6 Final -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.6.Final</version>
+            <version>5.4.10.Final</version>
         </dependency>
 		<dependency>
 		    <groupId>mysql</groupId>
